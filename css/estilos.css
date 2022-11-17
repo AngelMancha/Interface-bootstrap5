@@ -10935,3 +10935,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }/*# sourceMappingURL=estilos.css.map */
+
+@media (min-width: 600px) {
+  #prueba {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #columna_izquierda {
+    background-color: blue;
+  }
+  #prueba{
+    display: block;
+  }
+  .col-sm-3 {
+    display: none;
+  }
+}
