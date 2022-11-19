@@ -46,25 +46,162 @@
 <div class="container-fluid">
     <div class ="main row">
         <article class ="col-xs-3 col-sm-3 col-md-3 col-lg-3" id = "clumna_izquierda">
-            <p>
-                Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido.
-                También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que,
-                aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras
-                palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
-                Las ideas que comunica un texto están contenidas en lo que se suele denominar «macroproposiciones», unidades estructurales
-            </p>
+            <ul>
+                <li><a href = "main.html" ><i class="fa-solid fa-house"></i>  Inicio</a></li>
+
+                <li><a href = "#home" ><i class="fa-solid fa-download"></i>  Descargas </a></li>
+                <li id = "lanzamientos" ><a href = "" ><i class="fas fa-microphone-alt"></i>  Últimos Hits </a></li>
+                <li id = "lists_column" ><a href = "lists.html" ><i class="fa fa-music"></i>  Listas </a></li>
+                <li id = "lists_create" ><a href = "create_list.html" ><i class="fas fa-sliders-h"></i>  Crear </a></li>
+            </ul>
+
         </article>
 
 
         <aside class ="col-xs-9 col-sm-9 col-md-9 col-lg-9" id = "columna_derecha">
-                <p>
-                    Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido.
-                    También es una composición de caracteres imprimibles (con grafema) generados por un algoritmo de cifrado que,
-                    aunque no tienen sentido para cualquier persona, sí puede ser descifrado por su destinatario original. En otras
-                    palabras, un texto es un entramado de signos con una intención comunicativa que adquiere sentido en determinado contexto.
-                    Las ideas que comunica un texto están contenidas en lo que se suele denominar «macroproposiciones», unidades estructurales
-                </p>
+            <div class = "content_box">
+                <h4 class ="album_title">Rosalia Mix</h4>
 
+                <!-- En cada "row" situaremos una fila de 5 canciones (álbum)-->
+                <div class="row_music">
+                    <!-- Cada "column" representa la imagen de la canción-->
+                    <div class="column_music">
+                        <img src="archivos/imagenes/rosalia/despecha.jpg" alt="" width="150">
+                        <!-- Dentro de "column", con "middle" situaremos el reproductor superpuesto en la imagen-->
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_despe()">
+
+                        </div>
+                        <!-- Nombre de la canción-->
+                        <h6 class = "song_title">Despecha</h6>
+                    </div>
+
+                    <!-- Cada "column" representa la imagen de la canción-->
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Anime/saoko.png" alt="Saoko" width="150">
+                        <!-- Dentro de "column", con "middle" situaremos el reproductor superpuesto en la imagen-->
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="Freaky girl" width="70" onclick="rep_saoko()">
+
+                        </div>
+                        <!-- Nombre de la canción-->
+                        <h6 class = "song_title">Saoko</h6>
+                    </div>
+
+                    <div class="column_music">
+                        <img src="archivos/imagenes/rosalia/bizcochito.jpg" alt="Bizcochito" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="Freaky girl" width="70" onclick="rep_biz()">
+
+                        </div>
+                        <h6 class = "song_title">Bizcochito</h6>
+                    </div>
+
+                    <div class="column_music">
+                        <img src="archivos/imagenes/rosalia/dinero.jpg" alt="Dinero" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="Freaky girl" width="70" onclick="rep_dinero()">
+
+                        </div>
+                        <h6 class = "song_title">Dinero</h6>
+                    </div>
+
+                    <div class="column_music">
+                        <img src="archivos/imagenes/rosalia/altura.jpg" alt="Con altura" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_altura()">
+
+                        </div>
+                        <h6 class = "song_title">Con Altura</h6>
+                    </div>
+
+                </div> <!--ROW 1-->
+
+                <h4 class ="album_title" >Anime hits</h4>
+                <div class="row_music">
+
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Anime/kiminawa.jpg" alt="name" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_kimi()">
+                        </div>
+                        <h6 class = "song_title">Kimi na wa</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Anime/cruelangel.jpg" alt="Angel" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_cruel()">
+                        </div>
+                        <h6 class = "song_title">A cruel Angel's Thesis</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Anime/gurenge.jpg" alt="gurenge" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_gurenge()">
+                        </div>
+                        <h6 class = "song_title">Gurenge (Demon Slayer)</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Anime/shinzowosasageyo.jpg" alt="shinzowosasageyo" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_shinzo()">
+                        </div>
+                        <h6 class = "song_title">Shinzo wo sasageyo</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Anime/yourlieinapril.jpg" alt="your lie in april" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_shiga()">
+                        </div>
+                        <h6 class = "song_title">Shigatsu wa kimi no uso</h6>
+                    </div>
+
+                </div> <!--ROW 2-->
+
+
+                <h4 class ="album_title" >Tiktok Trends</h4>
+                <div class="row_music">
+
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Tiktok/otaku.jpg" alt="Baby otaku" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_baby()">
+                        </div>
+                        <h6 class = "song_title">Baby Otaku</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Tiktok/freaky.jpg" alt="Freaky girl" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_freaky()">
+                        </div>
+                        <h6 class = "song_title">Freaky Girl</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Tiktok/unholy.jfif" alt="unholy" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_unholy()">
+                        </div>
+                        <h6 class = "song_title">Unholy</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Tiktok/kulosa.jfif" alt="Kulosa" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_kulosa()">
+                        </div>
+                        <h6 class = "song_title">Kulosa</h6>
+                    </div>
+                    <div class="column_music">
+                        <img src="archivos/imagenes/Tiktok/cbat.jfif" alt="Cbat" width="150">
+                        <div class="middle">
+                            <img src="archivos/imagenes/play.png" alt="" width="70" onclick="rep_cbat()">
+                        </div>
+                        <h6 class = "song_title">Cbat</h6>
+                    </div>
+
+                </div> <!--ROW 3-->
+
+
+            </div> <!--content_box-->
 
         </aside>
 
