@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
     <title>Bootstrap demo</title>
 </head>
-<body>
+<body style = "background:linear-gradient(to bottom, #8fa4ea 0%, #151f42 100%); ">
 <div class="container-fluid">
 
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
@@ -21,16 +22,16 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#" style="color: white" >Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#" style="color: white">Link</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link disabled" style="color: white">Disabled</a>
               </li>
                 <li class="nav-item" id="prueba">
-                    <a class="nav-link disabled">PRUEBA</a>
+                    <a class="nav-link disabled" style="color: white">PRUEBA</a>
                 </li>
             </ul>
             <form class="d-flex" role="search">
@@ -46,6 +47,7 @@
 <div class="container-fluid">
     <div class ="main row">
         <article class ="col-xs-3 col-sm-3 col-md-3 col-lg-3" id = "clumna_izquierda">
+            <!--
             <ul>
                 <li><a href = "main.html" ><i class="fa-solid fa-house"></i>  Inicio</a></li>
 
@@ -54,6 +56,58 @@
                 <li id = "lists_column" ><a href = "lists.html" ><i class="fa fa-music"></i>  Listas </a></li>
                 <li id = "lists_create" ><a href = "create_list.html" ><i class="fas fa-sliders-h"></i>  Crear </a></li>
             </ul>
+            -->
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%">
+                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    <span class="fs-4">Sidebar</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                            Buscador
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-list"></i>
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                            Listas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <i class="fa-solid fa-download"></i>
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                            Descargas
+                        </a>
+                    </li>
+
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" class="rounded-circle me-2" width="32" height="32">
+                        <strong>mdo</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
 
         </article>
 
