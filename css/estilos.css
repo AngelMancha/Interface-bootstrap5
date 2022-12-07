@@ -10956,6 +10956,9 @@ textarea.form-control-lg {
 }
 
 
+.main_row{
+  padding-bottom: 70px;
+}
 .row_music {
   display:flex;
   flex-wrap: wrap;
@@ -10985,6 +10988,25 @@ textarea.form-control-lg {
   left:30%;
 
 }
+
+.song_title {
+  margin-top: -50px;
+}
+
+
+.footer_music {
+  background-color: #151f42;
+  position: fixed;
+  bottom: 0;/*color del fondo del footer*/
+  font-size: 12px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 85px;
+  z-index: 1; /* Trae al frente los elementos */
+  color: #818181;
+}
+
 /*Le añadimos un hover al reproductor*/
 .column_music:hover .middle{
   opacity: 1;
