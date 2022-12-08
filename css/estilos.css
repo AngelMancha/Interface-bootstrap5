@@ -11004,9 +11004,50 @@ textarea.form-control-lg {
   width: 100%;
   height: 85px;
   z-index: 1; /* Trae al frente los elementos */
-  color: #818181;
+
 }
 
+
+
+#reproductor_pause{
+  display:none;
+}
+
+.footer_nombres{
+  margin-top: 10px;
+  margin-left: 4px;
+  font-family: "Felix Titling";
+  font-size: 30px;
+  color: white;
+}
+
+.grid-container_footer{
+
+  height: 85px;
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
+
+  padding: 0;
+}
+
+#footer_message {
+
+  font-size: 30px;
+  color: white;
+
+}
+
+#play_boton{
+  margin-top: 15px;
+  font-size: 50px;
+  color: white;
+}
+
+#pause_boton{
+  margin-top: 15px;
+  font-size: 50px;
+  color: white;
+}
 /*Le añadimos un hover al reproductor*/
 .column_music:hover .middle{
   opacity: 1;
