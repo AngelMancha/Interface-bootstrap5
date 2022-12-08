@@ -10937,7 +10937,7 @@ textarea.form-control-lg {
 }/*# sourceMappingURL=estilos.css.map */
 
 @media (min-width: 600px) {
-  #prueba {
+  #home, #listas, #buscador, #descargas {
     display: none;
   }
 }
