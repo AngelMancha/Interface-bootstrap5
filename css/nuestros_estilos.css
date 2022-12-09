@@ -41,6 +41,24 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    #columna_izquierda {
+        background-color: blue;
+    }
+    #home, #descargas, #listas, #buscador{
+        display: block;
+    }
+    .col-sm-3 {
+        display: none;
+    }
+    .footer_music{
+        width: 100%;
+    }
+    .offcanvas-btn {
+        display: block;
+    }
+}
+
 
 .main_row{
     padding-bottom: 70px;
@@ -165,7 +183,6 @@ body {
 
 
 .dropdown {
-    padding-left: 80%;
     position: relative;
     display: inline-block;
 }
