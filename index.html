@@ -4,29 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/nuestros_estilos.css">
     <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
-    <title>Bootstrap demo</title>
+    <title>ZMusic Home</title>
 </head>
-<body style = "background:linear-gradient(to bottom, #8fa4ea 0%, #151f42 100%);">
+<body>
 <div>
 
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg bg-primary d-block">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
-                
               </a>
             <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropbtn" onclick="myFunction()">
+                    <img src="archivos/imagenes/profile_photo/foto_perfil_cute.jpg" alt="Profile"
+                         class="rounded-circle me-2" width="40" height="40">
 
-                <img src="images/profile.png" width="50" onclick="myFunction()" class="dropbtn">
-                <strong class  = "prueba">Profile</strong>
+                    <strong>Profile</strong>
+                    </div>
+                </a>
                 <div id="myDropdown" class="dropdown-content">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
-
+<!--
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -44,13 +49,14 @@
                 <li class="nav-item" id="descargas">
                     <a class="nav-link disabled" style="color: white">Descargas</a>
                 </li>
-            </ul>
+            </ul>-->
             <!--<form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-primary btn-lg" type="submit">Search</button></form>-->
+              <button class="btn btn-primary btn-lg" type="submit">Search</button></form>
+              </div>
+              -->
 
 
-          </div>
         </div>
       </nav>
 
@@ -60,22 +66,13 @@
     <div class ="main_row">
     <div class ="main row">
         <article class ="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <!--
-            <ul>
-                <li><a href = "main.html" ><i class="fa-solid fa-house"></i>  Inicio</a></li>
 
-                <li><a href = "#home" ><i class="fa-solid fa-download"></i>  Descargas </a></li>
-                <li id = "lanzamientos" ><a href = "" ><i class="fas fa-microphone-alt"></i>  Últimos Hits </a></li>
-                <li id = "lists_column" ><a href = "lists.html" ><i class="fa fa-music"></i>  Listas </a></li>
-                <li id = "lists_create" ><a href = "create_list.html" ><i class="fas fa-sliders-h"></i>  Crear </a></li>
-            </ul>
-            -->
             <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%;">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                    <span class="fs-4">Sidebar</span>
+                    <span class="fs-4">Menú</span>
                 </a>
-                <hr>
+
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
@@ -106,29 +103,77 @@
                     </li>
 
                 </ul>
-                <hr>
 
             </div>
 
         </article>
 
+
         <!-----------------------------------Columna izquierda--------------------------------------------->
         <!--Hacemos que en todas las pantallas el grid ocupe 9 -->
         <aside class ="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <!--Esto está oculto hasta que desaparece la barra de navegacion -->
+            <div class="offcanvas offcanvas-start bg-primary" id="demo">
+                <div class="offcanvas-header">
+                    <h1 class="text-light">Menu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                                Home
+                            </a>
+
+                            <a href="#" class="nav-link text-white">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                                Buscador
+                            </a>
+
+                            <a href="#" class="nav-link text-white">
+                                <i class="fa-solid fa-list"></i>
+                                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                                Listas
+                            </a>
+
+                            <a href="#" class="nav-link text-white">
+                                <i class="fa-solid fa-download"></i>
+                                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                                Descargas
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="container-fluid mt-3">
+                <aside class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+                    <div class="offcanvas-btn">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    <i class="fa-solid fa-bars"></i>
+                </button></div>
+                </aside>
+            </div>
             <!--Probando carrusel-->
+
             <div class="container-fluid">
+
                 <!-- Hacemos que el carrusel ocupe 3 grid en pantallas extrapequeñas, 6 en pantallas medianas
                  12 en pantallas medianas-grandes y 12 en pantallas grandes -->
                 <aside class="col-xs-3 col-sm-6 col-md-12 col-lg-15">
                     <!-- Carousel -->
                     <h2 class="text-light">Christmas Hits</h2>
-                    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
                         <!-- Indicators/dots -->
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
                         </div>
 
                         <!-- The slideshow/carousel -->
@@ -159,15 +204,17 @@
                         </div>
 
                         <!-- Left and right controls/icons -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </aside>
             </div>
+
+
 
             <div  style="height: 30px;">
 
