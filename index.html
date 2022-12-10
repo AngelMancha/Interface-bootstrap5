@@ -47,18 +47,21 @@
             <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%;">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                    <span class="fs-4">Menú</span>
+
                 </a>
 
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                        <div  style="height: 30px;">
+
+                        </div>
+                        <a href="index.html" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
                             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-white">
+                        <a href="buscador.html" class="nav-link text-white">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
                             Buscador
@@ -103,7 +106,7 @@
                                 Home
                             </a>
 
-                            <a href="#" class="nav-link text-white">
+                            <a href="buscador.html" class="nav-link text-white">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
                                 Buscador
@@ -126,6 +129,8 @@
 
                 </div>
             </div>
+
+            <div class="columna_derecha">
 
             <div class="container-fluid mt-3">
                 <aside class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
@@ -340,7 +345,7 @@
 
 
             </div> <!--content_box-->
-
+            </div> <!--columna derecha-->
         </aside>
 
 
@@ -349,36 +354,38 @@
 
 
 
-    <div class = "footer_music">
+        <div class = "footer_music">
 
-        <div class="grid-container_footer">
+            <div class="grid-container_footer">
 
 
-            <div id ="footer_foto1">
-                <img id = "footer_foto" src="" alt="" width="60" >
+                <div id ="footer_foto1">
+                    <img id = "footer_foto" src="" alt="" width="60" >
+                </div>
+
+                <div class ="footer_nombres">
+                    <h5 id = "artista">----</h5>
+                    <h3 id ="cancion">--</h3>
+                </div>
+
+                <div id = "reproductor_pause">
+                    <i id = "pause_boton" onclick="pausar()" class="fa fa-pause"></i>
+                </div>
+
+                <div id = "reproductor_play">
+                    <i id = "play_boton" onclick="reproducir()" class="fa fa-play"></i>
+                </div>
+
+
+                <div id ="like">
+                    <img  src="images/like.png" alt="" width="45" >
+                </div>
+
+
+
             </div>
-
-            <div class ="footer_nombres">
-                <h5 id = "artista">----</h5>
-                <h3 id ="cancion">--</h3>
-            </div>
-
-            <div id = "reproductor_pause">
-                <i id = "pause_boton" onclick="pausar()" class="fa fa-pause"></i>
-            </div>
-
-            <div id = "reproductor_play">
-                <i id = "play_boton" onclick="reproducir()" class="fa fa-play"></i>
-            </div>
-
-
-            <div>
-            </div>
-
 
         </div>
-
-    </div>
 </div>
 
 </div>

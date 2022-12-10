@@ -169,3 +169,36 @@ window.onclick = function(event) {
         }
     }
 }
+
+function seleccionar() {
+
+    var input, filter, table, tr, td, i, txtValue;
+    //obtiene lo que el usuario ha escrito en la barra del buscador
+    input = document.getElementById("myInput");
+    //lo transforma a mayúsculas para que no sea case sensitive
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    //obtiene las filas de la tabla y las guarda en la variable tr
+    // la variable tr (table row) contiene el nombre de la canción y el artista
+    //tr contiene 2 td´s (table data)
+    tr = table.getElementsByTagName("tr");
+
+    // Este bucle se ejecuta tantas veces como filas haya en la tabla
+    for (i = 0; i < tr.length; i++) {
+        //td guarda el elemento que contiene el nombre de la cancion
+        td = tr[i].getElementsByTagName("td")[1];
+
+        if (td) {
+            //obtiene el string que hay dentro del elemento td
+            txtValue = td.textContent || td.innerText;
+            //lo compara con lo que el usuario ha escrito en la barra del buscador
+            //y oculta las filas que no coincidan
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}

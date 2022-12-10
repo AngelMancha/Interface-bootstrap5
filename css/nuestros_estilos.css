@@ -1,6 +1,7 @@
 
 body {
-    background:linear-gradient(to bottom, #8fa4ea 0%, #151f42 100%);
+    background:linear-gradient(#8fa4ea 0%, #151f42 100%);
+    background-attachment: fixed;
 }
 
 
@@ -12,7 +13,7 @@ body {
     display: block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     #home, #listas, #buscador, #descargas {
         display: none;
     }
@@ -23,13 +24,19 @@ body {
     .offcanvas-btn {
         display: None;
     }
+    .col-sm-3 {
+        position: fixed;
+        height: 100%;
+    }
+    .columna_derecha{
+        padding-left: 35%;
+        width: 130%;
+    }
 }
 
 
 @media (max-width: 600px) {
-    #columna_izquierda {
-        background-color: blue;
-    }
+
     #home, #descargas, #listas, #buscador{
         display: block;
     }
@@ -38,13 +45,14 @@ body {
     }
     .footer_music{
         width: 100%;
+    }
+    .content_box_buscador{
+        padding-left: 6%;
     }
 }
 
 @media (max-width: 768px) {
-    #columna_izquierda {
-        background-color: blue;
-    }
+
     #home, #descargas, #listas, #buscador{
         display: block;
     }
@@ -53,10 +61,18 @@ body {
     }
     .footer_music{
         width: 100%;
+        left: 0px;
     }
     .offcanvas-btn {
         display: block;
     }
+
+}
+
+.header3{
+    position:fixed;
+    width:100%;
+    z-index:11;
 }
 
 
@@ -98,6 +114,7 @@ body {
 }
 
 
+/*-----------------------------------------------FOOTER-----------------------------------------------*/
 .footer_music {
 
     border-radius: 100px;
@@ -115,12 +132,13 @@ body {
 
 
 #reproductor_pause{
+
     display:none;
 }
 
 .footer_nombres{
     margin-top: 0px;
-    margin-left: -100px;
+
     font-size: 30px;
     color: white;
 }
@@ -129,9 +147,8 @@ body {
 
     height: 85px;
     display: grid;
-    grid-template-columns: 20% 20% 20%;
+    grid-template-columns: 25% 46% 10% 20% ;
 
-    padding: 0;
 }
 
 #footer_foto {
@@ -144,9 +161,11 @@ body {
 }
 
 #cancion{
-    top: -100px;
+
     font-family: "Arial Rounded MT Bold";
 }
+
+
 #play_boton{
     margin-top: 15px;
     font-size: 50px;
@@ -158,6 +177,13 @@ body {
     font-size: 50px;
     color: white;
 }
+
+#like{
+    padding-top: 18px;
+}
+/*----------------------------------------------------------------------------------------------*/
+
+
 /*Le añadimos un hover al reproductor*/
 .column_music:hover .middle{
     opacity: 1;
@@ -211,8 +237,65 @@ body {
 
 .show {display: block;}
 
-.header3{
-    position:fixed;
-    width:100%;
-    z-index:11;
+
+
+
+/*-----------------------------------------------BUSCADOR.HTML-----------------------------------------------*/
+
+.contenedor__todo {
+    vertical-align: center;
+    padding-left: 0%;
+    padding-right: 20%;
+    color: white;
+}
+
+
+#myInput {
+
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 113%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+    text-align: center; /* Left-align text */
+    padding: 12px; /* Add padding */
+    font-family: "Arial Rounded MT Bold";
+}
+
+#myTable tr {
+    /* Add a bottom border to all table rows */
+
+}
+
+#myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #151f42;
+}
+
+input[type=text], input[type=password] {
+    width: 75%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.buscador{
+    width: 60px;
+    border-radius: 50% !important;
 }

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/nuestros_estilos.css">
+  <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
+  <title>ZMusic Home</title>
+</head>
+<body>
+<div>
+  <div class="header3">
+    <nav class="navbar navbar-expand-lg bg-primary">
+
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <img src="archivos/imagenes/profile_photo/foto_perfil_cute.jpg" alt="Profile"
+                 class="rounded-circle me-2" width="40" height="40">
+            <strong class="dropbtn" onclick="myFunction()">Profile</strong>
+
+          </a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div>
+  <div class ="main_row">
+    <div class ="main row">
+      <div  style="height: 70px;">
+
+      </div>
+      <article class ="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%;">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+
+          </a>
+          <div  style="height: 30px;">
+
+          </div>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="buscador.html" class="nav-link text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                Buscador
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <i class="fa-solid fa-list"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                Listas
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <i class="fa-solid fa-download"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                Descargas
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </article>
+
+
+      <!-----------------------------------Columna izquierda--------------------------------------------->
+      <!--Hacemos que en todas las pantallas el grid ocupe 9 -->
+
+      <aside class ="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <!--Esto está oculto hasta que desaparece la barra de navegacion -->
+        <div class="offcanvas offcanvas-start bg-primary" id="demo">
+          <div class="offcanvas-header">
+
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                  Home
+                </a>
+
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                  Buscador
+                </a>
+
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-list"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                  Listas
+                </a>
+
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-download"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                  Descargas
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="columna_derecha">
+
+        <div class="container-fluid mt-3">
+          <aside class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+            <div class="offcanvas-btn">
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <i class="fa-solid fa-bars"></i>
+              </button></div>
+          </aside>
+        </div>
+        <!--Probando carrusel-->
+
+
+
+
+        <div class = "content_box_buscador">
+          <div class="contenedor__todo">
+
+            <input type="text" id="myInput" onkeyup="seleccionar()" placeholder="Escribe las iniciales de tu canción" title="Type in a name">
+
+
+
+            <!-- Creamos una tabla que va a contener todas las canciones que el usuario puede buscar y seleccionar-->
+            <table id="myTable">
+              <tr class="header">
+                <th style="width:25%;">Canción</th>
+                <th style="width:25%;"></th>
+                <th style="width:25%;">Artista</th>
+                <th style="width:25%;">Reproducir</th>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Tiktok/unholy.jfif" alt="Freaky girl" width="30"></td>
+                <td>Unholy</td>
+                <td>Sam Smith</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_unholy()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/rosalia/saoko.png" alt="Freaky girl" width="30"></td>
+                <td>Saoko</td>
+                <td>Rosalia</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_saoko()"></td>
+              </tr>
+
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Anime/shinzowosasageyo.jpg" alt="Freaky girl" width="30"></td>
+                <td>Shinzo Wo Sasageyo</td>
+                <td>Linked Horizon</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_shinzo()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Tiktok/kulosa.jfif" alt="Freaky girl" width="30"></td>
+                <td>Kulosa </td>
+                <td>Oxlade</td>
+                <td> <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_kulosa()"></td>
+              </tr>
+
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Anime/cruelangel.jpg" alt="Freaky girl" width="30"></td>
+                <td>Cruel Angel</td>
+                <td>Yoko Takahashi</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_cruel()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador"  src="archivos/imagenes/rosalia/bizcochito.jpg" alt="Freaky girl" width="30"></td>
+                <td>Bizcochito</td>
+                <td>Rosalia</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_biz()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/rosalia/dinero.jpg" alt="Freaky girl" width="30"></td>
+                <td>Dinero</td>
+                <td>Rosalia</td>
+                <td> <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_dinero()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/rosalia/altura.jpg" alt="Freaky girl" width="30"></td>
+                <td>Con Altura</td>
+                <td>Rosalia</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_altura()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Tiktok/otaku.jpg" alt="Freaky girl" width="30"></td>
+                <td>Baby Otaku </td>
+                <td>Polima</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_baby()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/rosalia/despecha.jpg" alt="Freaky girl" width="30"></td>
+                <td>Despecha</td>
+                <td>Rosalia</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_despe()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Anime/kiminawa.jpg" alt="Freaky girl" width="30"></td>
+                <td>Kiminawa</td>
+                <td>Your Name</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_kimi()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Anime/gurenge.jpg" alt="Freaky girl" width="30"></td>
+                <td>Gurenge</td>
+                <td>LiSA</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_gurenge()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Tiktok/cbat.jfif" alt="Freaky girl" width="30"></td>
+                <td>Cbat </td>
+                <td>Hudson</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_cbat()"></td>
+              </tr>
+
+              <tr>
+                <td><img class = "buscador" src="archivos/imagenes/Anime/yourlieinapril.jpg" alt="Freaky girl" width="30"></td>
+                <td>Shigatsu </td>
+                <td>Hikaru Nara</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_shiga()"></td>
+              </tr>
+
+
+              <tr>
+                <td><img class = "buscador"  src="archivos/imagenes/Tiktok/freaky.jpg" alt="Freaky girl" width="30"></td>
+                <td>Freaky Girl </td>
+                <td>Nicki Minaj</td>
+                <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_freaky()"></td>
+              </tr>
+
+
+
+
+
+
+
+
+
+            </table>
+
+          </div>
+
+        </div> <!--content_box-->
+
+        </div> <!--columna derecha-->
+      </aside>
+
+
+
+    </div>
+
+
+
+    <div class = "footer_music">
+
+      <div class="grid-container_footer">
+
+
+        <div id ="footer_foto1">
+          <img id = "footer_foto" src="" alt="" width="60" >
+        </div>
+
+        <div class ="footer_nombres">
+          <h5 id = "artista">----</h5>
+          <h3 id ="cancion">--</h3>
+        </div>
+
+        <div id = "reproductor_pause">
+          <i id = "pause_boton" onclick="pausar()" class="fa fa-pause"></i>
+        </div>
+
+        <div id = "reproductor_play">
+          <i id = "play_boton" onclick="reproducir()" class="fa fa-play"></i>
+        </div>
+
+
+        <div id ="like">
+          <img  src="images/like.png" alt="" width="45" >
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="prueba.js"></script>
+</body>
+</html>
