@@ -288,3 +288,11 @@ body {
     width: 60px;
     border-radius: 50% !important;
 }
+
+#validacion{
+    color:red;
+    font-size:12px;
+    padding: 10px;
+    width: 100%;
+    margin-top: -19px;
+  }

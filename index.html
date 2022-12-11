@@ -27,27 +27,33 @@
     <div class="modal-body">
         
             <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
-            <label for="floatingInput">Nombre</label>
+            <input type="text" class="form-control" id="nombre_registro" placeholder="Nombre" required>
+            <label for="nombre_registro">Nombre</label>
             </div>
             <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Apellido">
-            <label for="floatingPassword">Apellido</label>
+            <input type="text" class="form-control" id="apellido_registro" placeholder="Apellido" required>
+            <label for="apellido_registro">Apellido</label>
             </div>
             <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
-            <label for="floatingPassword">Usuario</label>
+            <input type="text" class="form-control" id="usuario_registro" placeholder="Usuario" required>
+            <label for="usuario_registro">Usuario</label>
             </div>
             <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="texto@email.com">
-            <label for="floatingPassword">E-mail</label>
+            <input type="email" class="form-control" id="email_registro" placeholder="texto@email.com" required>
+            <label for="email_registro">E-mail</label>
             </div>
             <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-            <label for="floatingPassword">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena_registro" placeholder="Contraseña" onkeyup="validar()" required>
+            <label for="contrasena_registro">Contraseña</label>
+            </div>
+            <div id="validacion">
             </div>
             <div class="mb-3">
-            <input class="form-control" type="file" id="formFile">
+            <input class="form-control" type="file" id="archivo_registro">
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
         
     </div>
@@ -55,7 +61,7 @@
     <!-- Modal footer -->
     <div class="modal-footer">
         <button type="reset" class="btn btn-danger">Limpiar</button>
-        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
+        <button type="submit" class="btn btn-primary" onclick="validarContrasena()">Enviar</button>
         
     </div>
     </form>
@@ -64,7 +70,7 @@
 </div>
 </div>
 
-<!-- INIICIAR SESIÓN -->
+<!-- INICIAR SESIÓN -->
 <div class="modal" id="myModal2">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -112,10 +118,11 @@
               </a>
 
             <div>
-            <!-- Button to Open the Modal -->
+            <!-- Boton registro -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                 Registrarse
             </button>
+             <!-- I. Sesión-->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
                 Iniciar Sesión
             </button>
@@ -499,5 +506,6 @@
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="lib/bootstrap/js/src/modal.js"></script>
 <script src="prueba.js"></script>
+<script src="informacion.js"></script>
 </body>
 </html>
