@@ -190,7 +190,6 @@ body {
 }
 
 
-
 .dropbtn {
     background-color: #151f42;
     color: white;
@@ -211,6 +210,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
+    display: none;
 }
 
 .dropdown-content {
@@ -282,17 +282,6 @@ body {
 #myTable tr.header, #myTable tr:hover {
     /* Add a grey background color to the table header and on hover */
     background-color: #151f42;
-}
-
-input[type=text], input[type=password] {
-    width: 75%;
-    padding: 12px 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 60px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
 }
 
 .buscador{

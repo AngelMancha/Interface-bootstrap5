@@ -9,6 +9,99 @@
     <title>ZMusic Home</title>
 </head>
 <body>
+
+  
+<!-- REGISTRO -->
+<div class="modal" id="myModal">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <form>
+        
+    <!-- Modal Header -->
+    <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    </div>
+
+    <!-- Modal body -->
+    <div class="modal-body">
+        
+            <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Nombre">
+            <label for="floatingInput">Nombre</label>
+            </div>
+            <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Apellido">
+            <label for="floatingPassword">Apellido</label>
+            </div>
+            <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+            <label for="floatingPassword">Usuario</label>
+            </div>
+            <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="texto@email.com">
+            <label for="floatingPassword">E-mail</label>
+            </div>
+            <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+            <label for="floatingPassword">Contraseña</label>
+            </div>
+            <div class="mb-3">
+            <input class="form-control" type="file" id="formFile">
+            </div>
+        
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+        <button type="reset" class="btn btn-danger">Limpiar</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
+        
+    </div>
+    </form>
+
+    </div>
+</div>
+</div>
+
+<!-- INIICIAR SESIÓN -->
+<div class="modal" id="myModal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <form>
+            
+        <!-- Modal Header -->
+        <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+    
+        <!-- Modal body -->
+        <div class="modal-body">
+            
+                <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+                <label for="floatingInput">Usuario</label>
+                </div>
+                <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                <label for="floatingPassword">Contraseña</label>
+                </div>            
+        </div>
+    
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="reset" class="btn btn-danger">Limpiar</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
+            
+        </div>
+        </form>
+    
+        </div>
+    </div>
+    </div>
+
+
 <div>
     <div class="header3">
     <nav class="navbar navbar-expand-lg bg-primary">
@@ -17,6 +110,16 @@
             <a class="navbar-brand" href="#">
                 <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
               </a>
+
+            <div>
+            <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                Registrarse
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
+                Iniciar Sesión
+            </button>
+            </div>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 
@@ -162,10 +265,10 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
 
-                                <img src="archivos/imagenes/christmas/snow.jpg" alt="" class="d-flex" style="width:100%;">
+                                <img src="archivos/imagenes/christmas/let_it_snow.jpg" alt="" class="d-flex" style="width:100%;">
                                 <div class="carousel-caption">
-                                    <h3>Snowman</h3>
-                                    <p>SIA</p>
+                                    <h3>Let It Snow! Let It Snow! Let It Snow!</h3>
+                                    <p>Dean Martin</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
@@ -177,10 +280,10 @@
 
                             </div>
                             <div class="carousel-item">
-                                <img src="archivos/imagenes/christmas/let_it_snow.jpg" alt="" class="d-block" style="width:100%;">
+                                <img src="archivos/imagenes/christmas/snow.jpg" alt="" class="d-block" style="width:100%;">
                                 <div class="carousel-caption">
-                                    <h3>Let It Snow! Let It Snow! Let It Snow!</h3>
-                                    <p>Dean Martin</p>
+                                    <h3>Snowman</h3>
+                                    <p>SIA</p>
                                 </div>
                             </div>
                         </div>
@@ -201,6 +304,8 @@
             <div  style="height: 30px;">
 
             </div>
+
+
 
             <div class = "content_box">
                 <h2 class ="text-light">Rosalia Mix</h2>
@@ -392,6 +497,7 @@
 
 
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="lib/bootstrap/js/src/modal.js"></script>
 <script src="prueba.js"></script>
 </body>
 </html>
