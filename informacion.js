@@ -17,7 +17,7 @@ function setCookie(){
 function validarContrasena() 
 {  
   var pw = document.getElementById("contrasena_registro").value;  
-  regex = /^[A-Za-z1-9]\w{2,8}$/;
+  regex = "[A-Za-z0-9]{2,8}";
   if(pw.match(regex)) 
   { 
   setCookie();
@@ -48,6 +48,9 @@ function validar()
     errors.push("Tu contraseña no puede incluir caracteres especiales. ");
 
   }
+  if (content.search(/[0-9]/) <0) {
+    errors.push("Tu contraseña debe incluir al menos un número. ");
+  }
   if (errors.length > 0) {
     validationField.innerHTML = errors.join('');
 
@@ -55,4 +58,57 @@ function validar()
   }
     validationField.innerHTML = errors.join('');
     return true;
+}
+
+function checkCookie() 
+{
+  var y = document.getElementById("usuario_sesion").value;
+  var username = localStorage.getItem("username");
+  var x = document.getElementById("contrasena_sesion").value;
+  var password = localStorage.getItem("password");
+  
+
+  if (username != null) 
+  { 
+    if (username==y) 
+    {
+        if (password==x) 
+        {
+          profile_menu();
+          return;
+        }
+        else
+        {
+          alert('Contraseña incorrecta.');
+          return;
+        }
+    }
+    else
+    {
+      alert('Usuario no registrado.');
+      return;
+    }
+  }
+  alert('Usuario no registrado.');
+  return;
+}
+
+
+
+function profile_menu()
+{   
+  document.getElementById("boton_registro_sesion").style.display = "none";  
+  document.getElementById("menu_perfil").style.display = "inline-block";
+  cambiar_foto();
+}
+
+
+function cambiar_foto(){
+    var file = localStorage.getItem("archivo_registro");
+    if (file != null) {
+      document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/foto_perfil_cute.jpg';
+    }
+    else{
+      document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/perfil_default.jpg';
+  }
 }
