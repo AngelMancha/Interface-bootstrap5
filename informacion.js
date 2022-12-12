@@ -96,12 +96,12 @@ function checkCookie()
 
 
 function profile_menu()
-{   
-  document.getElementById("boton_registro_sesion").style.display = "none";  
-  document.getElementById("myModal2").style.display = "none";  
-  document.getElementById("myModal").style.display = "none";  
+{ 
+
+  document.getElementById("boton_registro_sesion").style.display = "none";
   document.getElementById("menu_perfil").style.display = "inline-block";
   cambiar_foto();
+
 }
 
 

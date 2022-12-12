@@ -209,8 +209,14 @@ body {
 
 .dropdown {
     position: relative;
-    display:none;
+    display: none;
 }
+
+#boton_registro_sesion {
+    display: inline-block;
+    position: relative;
+}
+
 
 
 .dropdown-content {
@@ -295,4 +301,5 @@ body {
     padding: 10px;
     width: 100%;
     margin-top: -19px;
-  }
+}
+
