@@ -104,7 +104,7 @@ function profile_menu()
     document.getElementById("menu_perfil").style.display = "inline-block";
     cambiar_foto();
   }
-  else
+  if (localStorage.getItem("status")=="")
   {
     document.getElementById("boton_registro_sesion").style.display = "inline-block";
     document.getElementById("menu_perfil").style.display = "none";
@@ -124,6 +124,15 @@ function cambiar_foto(){
 }
 
 function cerrar_sesion(){
-  localStorage.setItem("status","");
-  profile_menu();
+  let text = "¿Seguro que quieres cerrar sesión?";
+    if (confirm(text) == true) 
+    {
+      localStorage.setItem("status","");
+      profile_menu();
+    } 
+    else 
+    {
+      return;
+    }
+  
 }
