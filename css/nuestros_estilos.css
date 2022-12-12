@@ -212,8 +212,10 @@ body {
     display: none;
 }
 
-
-
+#boton_registro_sesion {
+    position: relative;
+    display: block;
+}
 
 .dropdown-content {
     display: none;
@@ -290,6 +292,11 @@ body {
     width: 60px;
     border-radius: 50% !important;
 }
+
+
+/*-----------------------------------------------REGISTRO Y SESION-----------------------------------------------*/
+
+
 
 #validacion{
     color:red;

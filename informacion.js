@@ -114,8 +114,8 @@ function profile_menu()
 
 
 function cambiar_foto(){
-    var file = localStorage.getItem("archivo_registro");
-    if (file != null) {
+    var file = localStorage.getItem("photo");
+    if (file != "") {
       document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/foto_perfil_cute.jpg';
     }
     else{
