@@ -74,6 +74,7 @@ function checkCookie()
     {
         if (password==x) 
         {
+          localStorage.setItem("status","OK");
           profile_menu();
           return;
         }
@@ -97,10 +98,17 @@ function checkCookie()
 
 function profile_menu()
 { 
-
-  document.getElementById("boton_registro_sesion").style.display = "none";
-  document.getElementById("menu_perfil").style.display = "inline-block";
-  cambiar_foto();
+  if (localStorage.getItem("status")=="OK") 
+  {
+    document.getElementById("boton_registro_sesion").style.display = "none";
+    document.getElementById("menu_perfil").style.display = "inline-block";
+    cambiar_foto();
+  }
+  else
+  {
+    document.getElementById("boton_registro_sesion").style.display = "inline-block";
+    document.getElementById("menu_perfil").style.display = "none";
+  }
 
 }
 
@@ -113,4 +121,9 @@ function cambiar_foto(){
     else{
       document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/perfil_default.jpg';
   }
+}
+
+function cerrar_sesion(){
+  localStorage.setItem("status","");
+  profile_menu();
 }
