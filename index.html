@@ -86,19 +86,19 @@
         <div class="modal-body">
             
                 <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
-                <label for="floatingInput">Usuario</label>
+                <input type="text" class="form-control" id="usuario_sesion" placeholder="Usuario">
+                <label for="usuario_sesion">Usuario</label>
                 </div>
                 <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
-                <label for="floatingPassword">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena_sesion" placeholder="Contraseña">
+                <label for="contrasena_sesion">Contraseña</label>
                 </div>            
         </div>
     
         <!-- Modal footer -->
         <div class="modal-footer">
             <button type="reset" class="btn btn-danger">Limpiar</button>
-            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
+            <button type="submit" class="btn btn-primary" onclick="checkCookie()">Enviar</button>
             
         </div>
         </form>
@@ -117,7 +117,7 @@
                 <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
               </a>
 
-            <div>
+            <div id="boton_registro_sesion">
             <!-- Boton registro -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
                 Registrarse
@@ -127,11 +127,10 @@
                 Iniciar Sesión
             </button>
             </div>
-            <div class="dropdown">
+            <div class="dropdown" id="menu_perfil">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 
-                    <img src="archivos/imagenes/profile_photo/foto_perfil_cute.jpg" alt="Profile"
-                         class="rounded-circle me-2" width="40" height="40">
+                    <img src="" alt="Profile" class="rounded-circle me-2" width="40" height="40" id="foto_perfil">
                     <strong class="dropbtn" onclick="myFunction()">Profile</strong>
 
                 </a>

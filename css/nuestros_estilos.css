@@ -209,9 +209,9 @@ body {
 
 .dropdown {
     position: relative;
-    display: inline-block;
-    display: none;
+    display:none;
 }
+
 
 .dropdown-content {
     display: none;
