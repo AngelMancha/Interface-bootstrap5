@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/nuestros_estilos.css">
+  <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
+  <title>Listas</title>
+</head>
+<body>
+<div>
+  <div class="header3">
+    <nav class="navbar navbar-expand-lg bg-primary">
+
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
+        </a>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <img src="archivos/imagenes/profile_photo/foto_perfil_cute.jpg" alt="Profile"
+                 class="rounded-circle me-2" width="40" height="40">
+            <strong class="dropbtn" onclick="myFunction()">Profile</strong>
+
+          </a>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<div>
+  <div class ="main_row">
+    <div class ="main row">
+      <div  style="height: 70px;">
+
+      </div>
+      <article class ="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%;">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+
+          </a>
+
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <div  style="height: 30px;">
+
+              </div>
+              <a href="index.html" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="buscador.html" class="nav-link text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                Buscador
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <i class="fa-solid fa-list"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                Listas
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white">
+                <i class="fa-solid fa-download"></i>
+                <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                Descargas
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </article>
+
+
+      <!-----------------------------------Columna izquierda--------------------------------------------->
+      <!--Hacemos que en todas las pantallas el grid ocupe 9 -->
+      <aside class ="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <!--Esto está oculto hasta que desaparece la barra de navegacion -->
+        <div class="offcanvas offcanvas-start bg-primary" id="demo">
+          <div class="offcanvas-header">
+            <h1 class="text-light">Menu</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                  Home
+                </a>
+
+                <a href="buscador.html" class="nav-link text-white">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                  Buscador
+                </a>
+
+                <a href="listas.html" class="nav-link text-white">
+                  <i class="fa-solid fa-list"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                  Listas
+                </a>
+
+                <a href="#" class="nav-link text-white">
+                  <i class="fa-solid fa-download"></i>
+                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                  Descargas
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <div class="columna_derecha">
+
+          <div class="container-fluid mt-3">
+            <aside class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+              <div class="offcanvas-btn">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                  <i class="fa-solid fa-bars"></i>
+                </button></div>
+            </aside>
+          </div>
+          <div class="album py-5">
+            <div class="container">
+
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card bg-info">
+
+
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="" role="img"
+                         aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+
+                      <img src="archivos/imagenes/christmas/christmas.jpg" alt="christmas" style="margin-top: -225px">
+                      <text x="50%" y="50%" fill="#eceeef" >Christmas Hits</text></svg>
+                    <div class="card-body">
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-info">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder
+                    </title>
+
+                      <img src="archivos/imagenes/Tiktok/freaky.jpg" alt="christmas" style="margin-top: -225px">
+                      <text x="50%" y="50%" fill="#eceeef" >Nicki</text></svg>
+
+                    <div class="card-body">
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card bg-info">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder
+                    </title>
+
+                      <img src="archivos/imagenes/Anime/kiminawa.jpg" alt="christmas" style="margin-top: -225px">
+                      <text x="50%" y="50%" fill="#eceeef" >Anime Songs</text></svg>
+                    <div class="card-body">
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </aside>
+
+
+
+    </div>
+
+
+
+    <div class = "footer_music">
+
+      <div class="grid-container_footer">
+
+
+        <div id ="footer_foto1">
+          <img id = "footer_foto" src="" alt="" width="60" >
+        </div>
+
+        <div class ="footer_nombres">
+          <h5 id = "artista">----</h5>
+          <h3 id ="cancion">--</h3>
+        </div>
+
+        <div id = "reproductor_pause">
+          <i id = "pause_boton" onclick="pausar()" class="fa fa-pause"></i>
+        </div>
+
+        <div id = "reproductor_play">
+          <i id = "play_boton" onclick="reproducir()" class="fa fa-play"></i>
+        </div>
+
+
+        <div id ="like">
+          <img  src="images/like.png" alt="" width="45" >
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+<script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="prueba.js"></script>
+</body>
+</html>
