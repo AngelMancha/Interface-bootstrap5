@@ -67,7 +67,7 @@
               </a>
             </li>
             <li>
-              <a href="#" class="nav-link text-white">
+              <a href="listas.html" class="nav-link text-white">
                 <i class="fa-solid fa-list"></i>
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
                 Listas
@@ -101,18 +101,18 @@
           <div class="offcanvas-body">
             <ul class="nav nav-pills flex-column mb-auto">
               <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
+                <a href="index.html" class="nav-link active" aria-current="page"><i class="fa-solid fa-house"></i>
                   <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
                   Home
                 </a>
 
-                <a href="#" class="nav-link text-white">
+                <a href="buscador.html" class="nav-link text-white">
                   <i class="fa-solid fa-magnifying-glass"></i>
                   <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
                   Buscador
                 </a>
 
-                <a href="#" class="nav-link text-white">
+                <a href="listas.html" class="nav-link text-white">
                   <i class="fa-solid fa-list"></i>
                   <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
                   Listas
@@ -313,10 +313,22 @@
           <i id = "play_boton" onclick="reproducir()" class="fa fa-play"></i>
         </div>
 
+        <div id = "icono_volumen">
+          <i  class="fas fa-volume-up"></i>
+        </div>
+
+        <div class = "vol">
+          <input type ="range" id = "vol" min="0" value = "30" max="45" >
+          <div class = "vol bar"></div>
+          <div class = "dot" id ="vol_dot"></div>
+        </div>
+
 
         <div id ="like">
           <img  src="images/like.png" alt="" width="45" >
         </div>
+
+
 
 
 
@@ -329,6 +341,6 @@
 
 
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
-<script src="prueba.js"></script>
+<script src="index.js"></script>
 </body>
 </html>

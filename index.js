@@ -138,7 +138,7 @@ function rep_freaky() {
 function rep_unholy() {
 
     music.src=("./archivos/canciones/TikTok/UNHOLY.mp3");
-    document.getElementById("artista").innerHTML = "Sam Smith - Kim Petras"
+    document.getElementById("artista").innerHTML = "Sam Smith - KimP"
     document.getElementById("cancion").innerHTML = "Unholy"
     document.getElementById("footer_foto").src = ("./archivos/imagenes/Tiktok/unholy.jfif")
     reproducir()
@@ -213,3 +213,10 @@ function seleccionar() {
         }
     }
 }
+
+let vol = document.getElementById('vol');
+
+vol.addEventListener('change', ()=>{
+    let vol_a = vol.value;
+    music.volume = vol_a/100
+})
