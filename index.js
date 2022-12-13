@@ -213,3 +213,10 @@ function seleccionar() {
         }
     }
 }
+
+let vol = document.getElementById('vol');
+
+vol.addEventListener('change', ()=>{
+    let vol_a = vol.value;
+    music.volume = vol_a/100
+})
