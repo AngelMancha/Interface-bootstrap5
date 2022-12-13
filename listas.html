@@ -207,7 +207,7 @@
                             <td><img class = "buscador" src="archivos/imagenes/Anime/shinzowosasageyo.jpg" alt="Freaky girl" width="30"></td>
                             <td>Shinzo Wo Sasageyo</td>
                             <td>Linked Horizon</td>
-                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_shinzo()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" id=shinzo" onclick="addShinzo()"></td>
                           </tr>
 
                           <tr>
@@ -357,7 +357,7 @@
                   <div class="card bg-info">
 
                     <div class="card-body">
-                      <table class="table">
+                      <table class="table" id="tableSongs">
                         <thead>
                         <tr>
                           <th scope="col">#</th>
@@ -379,7 +379,11 @@
 
                           <td><img src="archivos/imagenes/play.png" alt="Saoko" width="30" onclick="addSaoko()"></td>
                         </tr>
-
+                        <tr>
+                          <td><img class = "buscador" src="archivos/imagenes/Anime/shinzowosasageyo.jpg" alt="Freaky girl" width="30"></td>
+                          <td>Shinzo Wo Sasageyo</td>
+                          <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_shinzo()"></td>
+                        </tr>
                         </tbody>
                       </table>
                       <div class="d-flex justify-content-between align-items-center">
@@ -392,13 +396,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
-
-
-
 
 
               </div>

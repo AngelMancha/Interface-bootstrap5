@@ -201,6 +201,7 @@ function seleccionar() {
         if (td) {
             //obtiene el string que hay dentro del elemento td
             txtValue = td.textContent || td.innerText;
+
             //lo compara con lo que el usuario ha escrito en la barra del buscador
             //y oculta las filas que no coincidan
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
