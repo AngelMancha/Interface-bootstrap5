@@ -179,7 +179,16 @@ body {
 }
 
 #like{
-    padding-top: 18px;
+    margin-top: 15px;
+    font-size: 50px;
+    color: white;
+}
+
+#no_like{
+    margin-top: 15px;
+    font-size: 50px;
+    color: white;
+    
 }
 /*----------------------------------------------------------------------------------------------*/
 

@@ -20,6 +20,16 @@ function pausar(){
     pause.style.display="none"
 }
 
+function like(){
+    document.getElementById("like").style.display="none";
+    document.getElementById("no_like").style.display="block";
+}
+
+function no_like(){
+    document.getElementById("like").style.display="block";
+    document.getElementById("no_like").style.display="none";
+}
+
 function rep_despe() {
     music.src = "./archivos/canciones/rosalia/despecha.mp3"
     document.getElementById("artista").innerHTML = "Rosalia"
