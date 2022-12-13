@@ -129,11 +129,19 @@ body {
 
 }
 
+#add_song, #btn_save {
+    display: none;
+}
+
+#songModal {
+    display: block;
+}
+
 #no_exist_playlist {
     display: block;
 }
 
-#playlist1, #playlist2, #playlist3 {
+#playlist1, #cancionesPlaylist, #playlist3 {
     display: none;
 }
 

@@ -3,10 +3,8 @@
 /* La siguiente función guarda en Local Storage la información de la playlist que crea el usuario */
 function setPlaylist(){
     let playlist_name = document.getElementById("nombre_playlist").value;
-    let song = document.getElementById("buscar_cancion").value;
     let playlist_photo = document.getElementById("foto_playlist").value;
     localStorage.setItem("Playlist", playlist_name);
-    localStorage.setItem("Song", song);
     localStorage.setItem("foto_playlist", playlist_photo);
     window.alert("Playlist creada con éxito")
     location.reload()
@@ -19,9 +17,8 @@ function setPlaylist(){
 * */
 function existPlaylist() {
     let playlist_name = localStorage.getItem("Playlist");
-    let song = localStorage.getItem("Song");
     let playlist_photo = localStorage.getItem("foto_playlist")
-    if (playlist_name !== null && song !== null) {
+    if (playlist_name !== null) {
         document.getElementById("playlist1").style.display = "inline-block";
         document.getElementById("no_exist_playlist").style.display = "none";
         setPlaylistValues(playlist_name, playlist_photo)
@@ -49,10 +46,42 @@ function getPlaylistImage(image) {
 
 /* Esta función pone los valores de la playlist */
 function setPlaylistValues(playlist_name, playlist_photo) {
-
     document.getElementById("playlist_tittle").innerHTML = playlist_name;
     if (playlist_photo !== "") {
         let id_photo_playlist = document.getElementById("photo_playlist");
         id_photo_playlist.src = getPlaylistImage(playlist_photo);
     }
 }
+
+
+/* Esta función permite añadir canciones */
+function addSongBtn() {
+    document.getElementById("add_song").style.display = "block";
+    document.getElementById("btn_save").style.display = "inline-block";
+}
+
+
+/* Esta función oculta el buscador y el botón Guardar */
+
+function saveBtn() {
+    document.getElementById("add_song").style.display = "none";
+    document.getElementById("btn_save").style.display = "none";
+}
+
+
+/* Esta funcion permite ver las canciones */
+function viewSongs() {
+    document.getElementById("cancionesPlaylist").style.display = "inline-block";
+}
+
+function addUnholy() {
+    let unholy = document.getElementById("unholy").value;
+    localStorage.setItem("unholy", unholy);
+}
+
+function addSaoko() {
+    let saoko = document.getElementById("saoko").value;
+    localStorage.setItem("saoko", saoko);
+}
+
+

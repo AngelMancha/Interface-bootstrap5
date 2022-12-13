@@ -170,22 +170,14 @@
                       <input type="text" class="form-control" id="nombre_playlist" placeholder="Nombre" required>
                       <label for="nombre_playlist">Nombre de la playlist</label>
                     </div>
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="buscar_cancion" placeholder="Nombre" required>
-                      <label for="buscar_cancion">Añadir canción</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input class="form-control" type="file" id="foto_playlist">
-                      <label for="foto_playlist">Seleccionar foto para playlist</label>
-                    </div>
 
-                    <div class = "content_box_buscador">
+                    <!--Añadir canciones-->
+                    <button type="reset" class="btn btn-primary" onclick="addSongBtn()">Añadir canción</button>
+                    <button type="reset" class="btn btn-success" id="btn_save" onclick="saveBtn()">Guardar</button>
+                    <div class = "content_box_buscador" id="add_song">
                       <div class="contenedor__todo">
 
-                        <input type="text" id="myInput" onkeyup="seleccionar()"
-                               placeholder="Escribe las iniciales de tu canción" title="Type in a name">
-
-
+                        <input type="text" id="myInput" onkeyup="seleccionar()" placeholder="Escribe las iniciales de tu canción" title="Type in a name">
 
                         <!-- Creamos una tabla que va a contener todas las canciones que el usuario puede buscar y seleccionar-->
                         <table id="myTable">
@@ -200,14 +192,14 @@
                             <td><img class = "buscador" src="archivos/imagenes/Tiktok/unholy.jfif" alt="Freaky girl" width="30"></td>
                             <td>Unholy</td>
                             <td>Sam Smith</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_unholy()"></td>
+                            <td><img src="archivos/imagenes/add_btn.png" alt="Unholy" width="30" id ="unholy" onclick="addUnholy()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/rosalia/saoko.png" alt="Freaky girl" width="30"></td>
                             <td>Saoko</td>
                             <td>Rosalia</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_saoko()"></td>
+                            <td><img src="archivos/imagenes/add_btn.png" alt="Saoko" width="30" id="saoko" onclick="addSaoko()"></td>
                           </tr>
 
 
@@ -215,14 +207,14 @@
                             <td><img class = "buscador" src="archivos/imagenes/Anime/shinzowosasageyo.jpg" alt="Freaky girl" width="30"></td>
                             <td>Shinzo Wo Sasageyo</td>
                             <td>Linked Horizon</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_shinzo()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_shinzo()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/Tiktok/kulosa.jfif" alt="Freaky girl" width="30"></td>
                             <td>Kulosa </td>
                             <td>Oxlade</td>
-                            <td> <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_kulosa()"></td>
+                            <td> <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_kulosa()"></td>
                           </tr>
 
 
@@ -230,70 +222,70 @@
                             <td><img class = "buscador" src="archivos/imagenes/Anime/cruelangel.jpg" alt="Freaky girl" width="30"></td>
                             <td>Cruel Angel</td>
                             <td>Yoko Takahashi</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_cruel()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_cruel()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador"  src="archivos/imagenes/rosalia/bizcochito.jpg" alt="Freaky girl" width="30"></td>
                             <td>Bizcochito</td>
                             <td>Rosalia</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_biz()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_biz()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/rosalia/dinero.jpg" alt="Freaky girl" width="30"></td>
                             <td>Dinero</td>
                             <td>Rosalia</td>
-                            <td> <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_dinero()"></td>
+                            <td> <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_dinero()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/rosalia/altura.jpg" alt="Freaky girl" width="30"></td>
                             <td>Con Altura</td>
                             <td>Rosalia</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_altura()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_altura()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/Tiktok/otaku.jpg" alt="Freaky girl" width="30"></td>
                             <td>Baby Otaku </td>
                             <td>Polima</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_baby()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_baby()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/rosalia/despecha.jpg" alt="Freaky girl" width="30"></td>
                             <td>Despecha</td>
                             <td>Rosalia</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_despe()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_despe()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/Anime/kiminawa.jpg" alt="Freaky girl" width="30"></td>
                             <td>Kiminawa</td>
                             <td>Your Name</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_kimi()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_kimi()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/Anime/gurenge.jpg" alt="Freaky girl" width="30"></td>
                             <td>Gurenge</td>
                             <td>LiSA</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_gurenge()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_gurenge()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/Tiktok/cbat.jfif" alt="Freaky girl" width="30"></td>
                             <td>Cbat </td>
                             <td>Hudson</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_cbat()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_cbat()"></td>
                           </tr>
 
                           <tr>
                             <td><img class = "buscador" src="archivos/imagenes/Anime/yourlieinapril.jpg" alt="Freaky girl" width="30"></td>
                             <td>Shigatsu </td>
                             <td>Hikaru Nara</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_shiga()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_shiga()"></td>
                           </tr>
 
 
@@ -301,7 +293,7 @@
                             <td><img class = "buscador"  src="archivos/imagenes/Tiktok/freaky.jpg" alt="Freaky girl" width="30"></td>
                             <td>Freaky Girl </td>
                             <td>Nicki Minaj</td>
-                            <td>  <img src="archivos/imagenes/play.png" alt="Freaky girl" width="30" onclick="rep_freaky()"></td>
+                            <td>  <img src="archivos/imagenes/add_btn.png" alt="Freaky girl" width="30" onclick="rep_freaky()"></td>
                           </tr>
 
 
@@ -309,6 +301,11 @@
 
                       </div>
 
+                    </div> <!--content_box-->
+                    <div style="margin-bottom: 15px"></div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control" type="file" id="foto_playlist">
+                      <label for="foto_playlist">Seleccionar foto para playlist</label>
                     </div>
 
                   </div>
@@ -317,7 +314,6 @@
                   <div class="modal-footer">
                     <button type="reset" class="btn btn-danger">Limpiar</button>
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="setPlaylist()">Enviar</button>
-
                   </div>
                 </form>
 
@@ -338,14 +334,16 @@
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="" role="img"
                          aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 
-                      <img src="archivos/imagenes/christmas/christmas.jpg" alt="playlist photo" id="photo_playlist" style="margin-top: -225px">
+                      <img src="archivos/playlist_photo/default.jpg" alt="playlist photo" id="photo_playlist" style="margin-top: -225px">
                       <text x="50%" y="50%" fill="#eceeef" id="playlist_tittle"></text>
                     </svg>
+
                     <div class="card-body">
 
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary" onclick="viewSongs()">View</button>
+
                           <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                         </div>
 
@@ -355,18 +353,35 @@
                 </div>
 
 
-                <div class="col" id="playlist2">
+                <div class="col" id="cancionesPlaylist">
                   <div class="card bg-info">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder
-                    </title>
-
-                      <img src="archivos/imagenes/Tiktok/freaky.jpg" alt="christmas" style="margin-top: -225px">
-                      <text x="50%" y="50%" fill="#eceeef" >Nicki</text></svg>
 
                     <div class="card-body">
+                      <table class="table">
+                        <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Song</th>
+                          <th scope="col">Rep</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                          <td><img class = "buscador" src="archivos/imagenes/Tiktok/unholy.jfif" alt="Freaky girl" width="30"></td>
+                          <td>Unholy</td>
 
+                          <td><img src="archivos/imagenes/play.png" alt="Unholy" width="30" onclick="addUnholy()"></td>
+                        </tr>
+
+                        <tr>
+                          <td><img class = "buscador" src="archivos/imagenes/rosalia/saoko.png" alt="Freaky girl" width="30"></td>
+                          <td>Saoko</td>
+
+                          <td><img src="archivos/imagenes/play.png" alt="Saoko" width="30" onclick="addSaoko()"></td>
+                        </tr>
+
+                        </tbody>
+                      </table>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                           <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
@@ -379,27 +394,9 @@
                 </div>
 
 
-                <div class="col" id="playlist3">
-                  <div class="card bg-info">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                         xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
-                         preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder
-                    </title>
 
-                      <img src="archivos/imagenes/Anime/kiminawa.jpg" alt="christmas" style="margin-top: -225px">
-                      <text x="50%" y="50%" fill="#eceeef" >Anime Songs</text></svg>
-                    <div class="card-body">
 
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                        </div>
-                        <small class="text-muted">9 mins</small>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
 
 
 
@@ -457,5 +454,6 @@
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="informacion.js"></script>
 <script src="playlists.js"></script>
+<script src="prueba.js"></script>
 </body>
 </html>
