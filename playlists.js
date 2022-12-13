@@ -19,7 +19,6 @@ function setPlaylist(){
 * */
 function existPlaylist() {
     let playlist_name = localStorage.getItem("Playlist");
-
     let song = localStorage.getItem("Song");
     let playlist_photo = localStorage.getItem("foto_playlist")
     if (playlist_name !== null && song !== null) {
@@ -33,7 +32,7 @@ function existPlaylist() {
 
 /* Esta función devuelve el Path de la imagen */
 function getPlaylistImage(image) {
-    let path = "archivos/imagenes/playlist_photo/";
+    let path = "archivos/playlist_photo/";
     let count_slash = 0;
     let img = "";
     for (let character of image) {
