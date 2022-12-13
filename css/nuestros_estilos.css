@@ -18,7 +18,7 @@ body {
         display: none;
     }
     .footer_music{
-        width: 76%;
+        width: 75%;
         left: 24%;
     }
     .offcanvas-btn {
@@ -144,8 +144,9 @@ body {
     font-size: 12px;
     text-align: center;
     display: block;
-    height: 70px;
+    height: 67px;
     z-index: 1; /* Trae al frente los elementos */
+    margin-bottom: 10px;
 
 }
 
