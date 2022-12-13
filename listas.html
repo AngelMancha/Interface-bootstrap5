@@ -8,7 +8,7 @@
   <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
   <title>Listas</title>
 </head>
-<body>
+<body onload="existPlaylist()">
 <div>
   <div class="header3">
     <nav class="navbar navbar-expand-lg bg-primary">
@@ -145,7 +145,7 @@
         <div style="margin-top: 50px"></div>
           <h1 class="text-light"> Playlists </h1>
           <div style="margin-top: 30px"></div>
-          <h3 class="text-light">Ups... No hemos encontrado nada aquí.</h3>
+          <h3 class="text-light" id="no_exist_playlist">Ups... No hemos encontrado nada aquí.</h3>
           <h3 class="text-light"> ¡Prueba a crear tus propias playlists!</h3>
           <div style="margin-top: 20px"></div>
          <button type="button" class="btn btn-primary btn-lg active" data-bs-toggle="modal" data-bs-target="#myModal"> Crear playlist </button>
@@ -173,6 +173,10 @@
                     <div class="form-floating mb-3">
                       <input type="text" class="form-control" id="buscar_cancion" placeholder="Nombre" required>
                       <label for="buscar_cancion">Añadir canción</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input class="form-control" type="file" id="foto_playlist">
+                      <label for="foto_playlist">Seleccionar foto para playlist</label>
                     </div>
 
                     <div class = "content_box_buscador">
@@ -327,15 +331,16 @@
             <div class="container">
 
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
+
+                <!-- Una playlist-->
+                <div class="col" id="playlist1">
                   <div class="card bg-info">
-
-
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="" role="img"
                          aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 
-                      <img src="archivos/imagenes/christmas/christmas.jpg" alt="christmas" style="margin-top: -225px">
-                      <text x="50%" y="50%" fill="#eceeef" >Christmas Hits</text></svg>
+                      <img src="archivos/imagenes/christmas/christmas.jpg" alt="playlist photo" id="photo_playlist" style="margin-top: -225px">
+                      <text x="50%" y="50%" fill="#eceeef" id="playlist_tittle"></text>
+                    </svg>
                     <div class="card-body">
 
                       <div class="d-flex justify-content-between align-items-center">
@@ -348,7 +353,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+
+
+                <div class="col" id="playlist2">
                   <div class="card bg-info">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
@@ -370,7 +377,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="col">
+
+
+                <div class="col" id="playlist3">
                   <div class="card bg-info">
                     <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"

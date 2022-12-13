@@ -129,6 +129,13 @@ body {
 
 }
 
+#no_exist_playlist {
+    display: block;
+}
+
+#playlist1, #playlist2, #playlist3 {
+    display: none;
+}
 
 
 #reproductor_pause{
