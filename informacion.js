@@ -17,7 +17,7 @@ function setCookie(){
 function validarContrasena() 
 {  
   var pw = document.getElementById("contrasena_registro").value;  
-  regex = "[A-Za-z0-9]{2,8}";
+  regex = /^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{2,8}$/;
   if(pw.match(regex)) 
   { 
   setCookie();
@@ -25,7 +25,7 @@ function validarContrasena()
   }
   else
   { 
-  alert('Contraseña no válida. Debe contener letras y números, con longitud máxima de 8 caracteres')
+  alert('Contraseña no válida. Debe contener 2 cracateres con letras y números, con longitud máxima de 8')
   return false;
   }
 }

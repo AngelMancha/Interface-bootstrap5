@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
     <title>ZMusic Home</title>
 </head>
-<body>
+<body onload="profile_menu()">
 
   
 <!-- REGISTRO -->
@@ -117,13 +117,13 @@
                 <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
               </a>
 
-            <div id="boton_registro_sesion" onload="profile_menu()">
+            <div id="boton_registro_sesion">
             <!-- Boton registro -->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Registrarse</button>
              <!-- I. Sesión-->
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">Iniciar Sesión</button>
             </div>
-            <div class="dropdown" id="menu_perfil" onload="profile_menu()">
+            <div class="dropdown" id="menu_perfil">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 
                     <img src="" alt="Profile" class="rounded-circle me-2" width="40" height="40" id="foto_perfil">
