@@ -8,7 +8,104 @@
   <script src="https://kit.fontawesome.com/95a921107d.js" crossorigin="anonymous"></script>
   <title>ZMusic Home</title>
 </head>
-<body>
+<body onload="profile_menu()">
+
+<!-- REGISTRO -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+      <div class="modal-content bg-info">
+      <form>
+          
+      <!-- Modal Header -->
+      <div class="modal-header">
+          <h4 class="modal-title">Registro</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+  
+      <!-- Modal body -->
+      <div class="modal-body">
+          
+              <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="nombre_registro" placeholder="Nombre" required>
+              <label for="nombre_registro">Nombre</label>
+              </div>
+              <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="apellido_registro" placeholder="Apellido" required>
+              <label for="apellido_registro">Apellido</label>
+              </div>
+              <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="usuario_registro" placeholder="Usuario" required>
+              <label for="usuario_registro">Usuario</label>
+              </div>
+              <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email_registro" placeholder="texto@email.com" required>
+              <label for="email_registro">E-mail</label>
+              </div>
+              <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="contrasena_registro" placeholder="Contraseña" onkeyup="validar()" required>
+              <label for="contrasena_registro">Contraseña</label>
+              </div>
+              <div id="validacion">
+              </div>
+              <div class="mb-3">
+              <input class="form-control" type="file" id="archivo_registro">
+              </div>
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+          
+      </div>
+  
+      <!-- Modal footer -->
+      <div class="modal-footer">
+          <button type="reset" class="btn btn-primary">Limpiar</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  onclick="validarContrasena()">Enviar</button>
+          
+      </div>
+      </form>
+  
+      </div>
+  </div>
+  </div>
+  
+  <!-- INICIAR SESIÓN -->
+  <div class="modal" id="myModal2">
+      <div class="modal-dialog">
+          <div class="modal-content bg-info">
+          <form>
+              
+          <!-- Modal Header -->
+          <div class="modal-header">
+              <h4 class="modal-title">Inicio de Sesión</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+      
+          <!-- Modal body -->
+          <div class="modal-body">
+              
+                  <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="usuario_sesion" placeholder="Usuario">
+                  <label for="usuario_sesion">Usuario</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="contrasena_sesion" placeholder="Contraseña">
+                  <label for="contrasena_sesion">Contraseña</label>
+                  </div>            
+          </div>
+      
+          <!-- Modal footer -->
+          <div class="modal-footer">
+              <button type="reset" class="btn btn-primary">Limpiar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
+              
+          </div>
+          </form>
+      
+          </div>
+      </div>
+      </div>
+  
 <div>
   <div class="header3">
     <nav class="navbar navbar-expand-lg bg-primary">
@@ -17,11 +114,16 @@
         <a class="navbar-brand" href="#">
           <img src="images/logo_principal.png" alt="Logo" width="100" height=auto class="d-inline-block align-text-top">
         </a>
-        <div class="dropdown">
+        <div id="boton_registro_sesion">
+          <!-- Boton registro -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Registrarse</button>
+           <!-- I. Sesión-->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal2">Iniciar Sesión</button>
+        </div>
+        <div class="dropdown" id="menu_perfil">
           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 
-            <img src="archivos/imagenes/profile_photo/foto_perfil_cute.jpg" alt="Profile"
-                 class="rounded-circle me-2" width="40" height="40">
+            <img src="" alt="Profile" class="rounded-circle me-2" width="40" height="40" id="foto_perfil">
             <strong class="dropbtn" onclick="myFunction()">Profile</strong>
 
           </a>
@@ -29,6 +131,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            <a onclick="cerrar_sesion()">Cerrar Sesión</a>
           </div>
         </div>
       </div>
@@ -342,5 +445,6 @@
 
 <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
 <script src="index.js"></script>
+<script src="informacion.js"></script>
 </body>
 </html>
