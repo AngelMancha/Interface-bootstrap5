@@ -124,15 +124,8 @@ function cambiar_foto(){
 }
 
 function cerrar_sesion(){
-  let text = "¿Seguro que quieres cerrar sesión?";
-    if (confirm(text) == true) 
-    {
-      localStorage.setItem("status","");
-      profile_menu();
-    } 
-    else 
-    {
-      return;
-    }
+
+  localStorage.setItem("status","");
+  profile_menu();
   
 }
