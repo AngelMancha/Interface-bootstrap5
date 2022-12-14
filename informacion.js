@@ -109,17 +109,20 @@ function profile_menu()
     document.getElementById("boton_registro_sesion").style.display = "inline-block";
     document.getElementById("menu_perfil").style.display = "none";
   }
+  document.getElementById("Profile").innerHTML=localStorage.getItem("username");
+
 
 }
 
 
+
 function cambiar_foto(){
-    var file = localStorage.getItem("photo");
-    if (file != "") {
-      document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/foto_perfil_cute.jpg';
-    }
-    else{
-      document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/perfil_default.jpg';
+  var file = localStorage.getItem("photo");
+  if (file != "") {
+    document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/foto_perfil_cute.jpg';
+  }
+  else{
+    document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/perfil_default.jpg';
   }
 }
 
