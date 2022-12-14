@@ -21,6 +21,8 @@ function validarContrasena()
   if(pw.match(regex)) 
   { 
   setCookie();
+  localStorage.setItem("status","OK");
+  profile_menu();
   return true;
   }
   else
