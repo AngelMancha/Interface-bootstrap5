@@ -175,9 +175,8 @@
             <h2>.</h2>
 
             <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%;">
-                <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"> Menu
                     <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-
                 </a>
 
                 <ul class="nav nav-pills flex-column mb-auto">
@@ -257,12 +256,12 @@
             </div>
 
             <div class="columna_derecha">
-
+            <div style="margin-top: 20px"></div>
             <div class="container-fluid mt-3">
                 <aside class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
                     <div class="offcanvas-btn">
                 <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-                    <i class="fa-solid fa-bars"></i>
+                    Sidebar <i class="fa-solid fa-bars"></i>
                 </button></div>
                 </aside>
             </div>
@@ -279,9 +278,9 @@
 
                         <!-- Indicators/dots -->
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active">1</button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1">2</button>
-                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2">3</button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active">.</button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1">.</button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2">.</button>
                         </div>
 
                         <!-- The slideshow/carousel -->
@@ -322,10 +321,10 @@
 
                         <!-- Left and right controls/icons -->
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
+                            <span class="carousel-control-prev-icon">.</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
+                            <span class="carousel-control-next-icon">.</span>
                         </button>
                     </div>
                 </aside>
@@ -501,8 +500,8 @@
                 </div>
 
                 <div class ="footer_nombres">
-                    <h5 id = "artista">----</h5>
-                    <h3 id ="cancion">--</h3>
+                    <h5 id = "artista">No song</h5>
+                    <h3 id ="cancion">selected</h3>
                 </div>
 
                 <div id = "reproductor_pause">
@@ -518,7 +517,9 @@
                 </div>
 
                 <div class = "vol">
-                    <input type ="range" id = "vol" min="0" value = "30" max="45" >
+                    <label for="vol">
+                        .<input type ="range" id = "vol" min="0" value = "30" max="45" >
+                    </label>
                     <div class = "vol bar"></div>
                     <div class = "dot" id ="vol_dot"></div>
                 </div>

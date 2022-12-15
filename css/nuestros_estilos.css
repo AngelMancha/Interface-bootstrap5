@@ -215,10 +215,15 @@ body {
 
 #artista{
     font-family: "Candara Light";
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
 }
 
 #cancion{
-
+    font-weight: 100;
+    color: white;
+    font-size: 18px;
     font-family: "Arial Rounded MT Bold";
 }
 
