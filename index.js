@@ -38,6 +38,31 @@ function rep_despe() {
     reproducir()
 }
 
+function rep_let_snow() {
+    music.src = "./archivos/canciones/christmas/let_snow.mp3"
+    document.getElementById("artista").innerHTML = "Dean Martin"
+    document.getElementById("cancion").innerHTML = "Let It Snow!"
+    document.getElementById("footer_foto").src = ("./archivos/imagenes/christmas/let_snow_resized.png")
+    reproducir()
+}
+
+function rep_all_want() {
+    music.src = "./archivos/canciones/christmas/all_i_want.mp3"
+    document.getElementById("artista").innerHTML = "Mariah Carey!"
+    document.getElementById("cancion").innerHTML = "All I want"
+    document.getElementById("footer_foto").src = ("./archivos/imagenes/christmas/mariah_resized.png")
+    reproducir()
+}
+
+
+function rep_snowman() {
+    music.src = "./archivos/canciones/christmas/snowman.mp3"
+    document.getElementById("artista").innerHTML = "SIA"
+    document.getElementById("cancion").innerHTML = "Snowman"
+    document.getElementById("footer_foto").src = ("./archivos/imagenes/christmas/snowman_resized.png")
+    reproducir()
+}
+
 
 function rep_saoko() {
 

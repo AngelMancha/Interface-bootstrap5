@@ -97,8 +97,8 @@
     
         <!-- Modal footer -->
         <div class="modal-footer">
-            <button type="reset" class="btn btn-primary">Limpiar</button>
-            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
+            <button type="reset" class="btn btn-danger">Limpiar</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
             
         </div>
         </form>
@@ -117,7 +117,7 @@
         </div>
         <!-- Modal body -->
         <div class="modal-body">
-            <h6 class="modal-title">¿Seguro que desea cerrar sesión?</h4>                      
+            <h4 class="modal-title">¿Seguro que desea cerrar sesión?</h4>
         </div>
     
         <!-- Modal footer -->
@@ -170,6 +170,8 @@
         <div  style="height: 70px;">
 
         </div>
+
+        <!--Barra de navegación lateral--->
         <article class ="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 
             <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark bg-primary" style=" height:100%;">
@@ -289,14 +291,20 @@
                         <!-- The slideshow/carousel -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-
+                                <div class="play">
+                                    <img src="archivos/imagenes/play1.png" alt="" width="70" onclick="rep_let_snow()">
+                                </div>
                                 <img src="archivos/imagenes/christmas/let_it_snow.jpg" alt="" class="d-flex" style="width:100%;">
+
                                 <div class="carousel-caption">
                                     <h3>Let It Snow! Let It Snow! Let It Snow!</h3>
                                     <p>Dean Martin</p>
                                 </div>
                             </div>
                             <div class="carousel-item">
+                                <div class="play">
+                                    <img src="archivos/imagenes/play1.png" alt="" width="70" onclick="rep_all_want()">
+                                </div>
                                 <img src="archivos/imagenes/christmas/all_christmas.jpg" alt="" class="d-block" style="width:100%;">
                                 <div class="carousel-caption">
                                     <h3>All I want for christmas is you</h3>
@@ -305,6 +313,9 @@
 
                             </div>
                             <div class="carousel-item">
+                                <div class="play">
+                                    <img src="archivos/imagenes/play1.png" alt="" width="70" onclick="rep_snowman()">
+                                </div>
                                 <img src="archivos/imagenes/christmas/snow.jpg" alt="" class="d-block" style="width:100%;">
                                 <div class="carousel-caption">
                                     <h3>Snowman</h3>
@@ -518,7 +529,7 @@
 
 
                 <div id = "like">
-                    <i id = "like" onclick="like()" class="fa fa-heart"></i>
+                    <i onclick="like()" class="fa fa-heart"></i>
                 </div>
 
                 <div id = "no like">

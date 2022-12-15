@@ -27,7 +27,7 @@ function validarContrasena()
   }
   else
   { 
-  alert('Contraseña no válida. Debe contener 2 cracateres con letras y números, con longitud máxima de 8')
+  alert('Contraseña no válida. Debe contener 2 caracteres con letras y números, con longitud máxima de 8')
   return false;
   }
 }

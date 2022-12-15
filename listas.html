@@ -10,101 +10,6 @@
 </head>
 <body onload="existPlaylist();profile_menu()">
 
-<!-- REGISTRO -->
-<div class="modal" id="myModal">
-  <div class="modal-dialog">
-      <div class="modal-content bg-info">
-      <form>
-          
-      <!-- Modal Header -->
-      <div class="modal-header">
-          <h4 class="modal-title">Registro</h4>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-  
-      <!-- Modal body -->
-      <div class="modal-body">
-          
-              <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="nombre_registro" placeholder="Nombre" required>
-              <label for="nombre_registro">Nombre</label>
-              </div>
-              <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="apellido_registro" placeholder="Apellido" required>
-              <label for="apellido_registro">Apellido</label>
-              </div>
-              <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="usuario_registro" placeholder="Usuario" required>
-              <label for="usuario_registro">Usuario</label>
-              </div>
-              <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="email_registro" placeholder="texto@email.com" required>
-              <label for="email_registro">E-mail</label>
-              </div>
-              <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="contrasena_registro" placeholder="Contraseña" onkeyup="validar()" required>
-              <label for="contrasena_registro">Contraseña</label>
-              </div>
-              <div id="validacion">
-              </div>
-              <div class="mb-3">
-              <input class="form-control" type="file" id="archivo_registro">
-              </div>
-              <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-          
-      </div>
-  
-      <!-- Modal footer -->
-      <div class="modal-footer">
-          <button type="reset" class="btn btn-primary">Limpiar</button>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  onclick="validarContrasena()">Enviar</button>
-          
-      </div>
-      </form>
-  
-      </div>
-  </div>
-  </div>
-  
-  <!-- INICIAR SESIÓN -->
-  <div class="modal" id="myModal2">
-      <div class="modal-dialog">
-          <div class="modal-content bg-info">
-          <form>
-              
-          <!-- Modal Header -->
-          <div class="modal-header">
-              <h4 class="modal-title">Inicio de Sesión</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-      
-          <!-- Modal body -->
-          <div class="modal-body">
-              
-                  <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="usuario_sesion" placeholder="Usuario">
-                  <label for="usuario_sesion">Usuario</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                  <input type="password" class="form-control" id="contrasena_sesion" placeholder="Contraseña">
-                  <label for="contrasena_sesion">Contraseña</label>
-                  </div>            
-          </div>
-      
-          <!-- Modal footer -->
-          <div class="modal-footer">
-              <button type="reset" class="btn btn-primary">Limpiar</button>
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="checkCookie()">Enviar</button>
-              
-          </div>
-          </form>
-      
-          </div>
-      </div>
-      </div>
 
 <!-- CERRAR SESIÓN -->
 <div class="modal" id="myModal4">
@@ -116,7 +21,7 @@
       </div>
       <!-- Modal body -->
       <div class="modal-body">
-          <h6 class="modal-title">¿Seguro que desea cerrar sesión?</h4>                      
+          <h4 class="modal-title">¿Seguro que desea cerrar sesión?</h4>
       </div>
   
       <!-- Modal footer -->
@@ -293,14 +198,12 @@
                   <!-- Modal body -->
                   <div class="modal-body">
 
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control" id="nombre_playlist" placeholder="Nombre" required>
-                      <label for="nombre_playlist">Nombre de la playlist</label>
-                    </div>
+
 
                     <!--Añadir canciones-->
                     <button type="reset" class="btn btn-primary" onclick="addSongBtn()">Añadir canción</button>
                     <button type="reset" class="btn btn-success" id="btn_save" onclick="saveBtn()">Guardar cambios</button>
+                    <div style="margin: 8px"></div>
                     <div class = "content_box_buscador" id="add_song">
                       <div class="contenedor__todo">
 
@@ -435,6 +338,11 @@
                       <label for="foto_playlist">Seleccionar foto para playlist</label>
                     </div>
 
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="nombre_playlist" placeholder="Nombre" required>
+                      <label for="nombre_playlist">Nombre de la playlist</label>
+                    </div>
+
                   </div>
 
                   <!-- Modal footer -->
@@ -532,11 +440,7 @@
         </div>
       </aside>
 
-
-
     </div>
-
-
 
     <div class = "footer_music">
 
@@ -571,7 +475,7 @@
         </div>
 
         <div id = "like">
-          <i id = "like" onclick="like()" class="fa fa-heart"></i>
+          <i onclick="like()" class="fa fa-heart"></i>
         </div>
 
         <div id = "no like">
