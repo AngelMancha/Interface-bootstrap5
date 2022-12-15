@@ -121,14 +121,31 @@ function profile_menu()
 
 
 function cambiar_foto(){
-  var file = localStorage.getItem("photo");
-  if (file != "") {
-    document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/foto_perfil_cute.jpg';
+  const file = localStorage.getItem("photo");
+  if (file !== "") {
+    document.getElementById("foto_perfil").src = getProfilePhoto(file);
   }
   else{
-    document.getElementById("foto_perfil").src = 'archivos/imagenes/profile_photo/perfil_default.jpg';
+    document.getElementById("foto_perfil").src = 'archivos/imagenes/photos/perfil_default.jpg';
   }
 }
+
+/* Esta función devuelve el Path de la imagen */
+function getProfilePhoto(image) {
+  let path = "archivos/imagenes/photos/";
+  let count_slash = 0;
+  let img = "";
+  for (let character of image) {
+    if (count_slash > 1) {
+      img += character;
+    }
+    if (character === "\\") {
+      count_slash += 1
+    }
+  }
+  return path + img
+}
+
 
 function cerrar_sesion(){
 

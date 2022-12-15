@@ -13,8 +13,6 @@ function setPlaylist(){
 }
 
 
-
-
 /* Esta función comprueba si una playlist existe. En caso de que no exista se mostrará un mensaje
 * en el que se notifica al usuario que no hay existencia de playlist
 * En otro caso se muestra un album con la foto de la playlist y las canciones que incluye
@@ -33,7 +31,7 @@ function existPlaylist() {
 
 /* Esta función devuelve el Path de la imagen */
 function getPlaylistImage(image) {
-    let path = "archivos/playlist_photo/";
+    let path = "archivos/imagenes/photos/";
     let count_slash = 0;
     let img = "";
     for (let character of image) {
