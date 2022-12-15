@@ -79,23 +79,45 @@ function viewSongs() {
     //tr contiene 2 td´s (table data)
     let array_songs = getSongs();
 
-
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName("td")[1];
-
         if (td) {
             song = td.textContent || td.innerText;
+            document.write(song)
             if (array_songs[i-1] === "True") {
                 tr[i].style.display = "";
             }
             else {
-
                 tr[i].style.display = "none";
             }
         }
     }
 }
+
+/* Esta función obtiene los valores de las canciones y devuelve una lista con ellas */
+function getSongs() {
+    let letSnow = localStorage.getItem("letSnow")
+    let unholy = localStorage.getItem("unholy");
+    let saoko = localStorage.getItem("saoko");
+    let shinzo = localStorage.getItem("shinzo");
+    let mariah = localStorage.getItem("mariah")
+    let kulosa = localStorage.getItem("kulosa")
+    let cruel = localStorage.getItem("cruel")
+    let biz = localStorage.getItem("biz")
+    let dinero = localStorage.getItem("dinero")
+    let altura = localStorage.getItem("altura")
+    let baby = localStorage.getItem("baby")
+    let despe = localStorage.getItem("despe")
+    let kimi = localStorage.getItem("kimi")
+    let gurenge = localStorage.getItem("gurenge")
+    let cbat = localStorage.getItem("cbat")
+    let shiga = localStorage.getItem("shiga")
+    let freaky = localStorage.getItem("freaky")
+
+    return [letSnow, unholy, saoko, mariah, shinzo, kulosa, cruel, biz, dinero, altura, baby, despe, kimi, gurenge, cbat, shiga, freaky]
+}
+
 
 function addUnholy() {
     localStorage.setItem("unholy", "True");
@@ -109,11 +131,58 @@ function addShinzo() {
     localStorage.setItem("shinzo", "True");
 }
 
+function addLetSnow() {
+    localStorage.setItem("letSnow", "True");
+}
 
-/* Esta función obtiene los valores de las canciones y devuelve una lista con ellas */
-function getSongs() {
-    let unholy = localStorage.getItem("unholy");
-    let saoko = localStorage.getItem("saoko");
-    let shinzo = localStorage.getItem("shinzo");
-    return [unholy, saoko, shinzo]
+function addMariah() {
+    localStorage.setItem("mariah", "True");
+}
+
+function addKulosa() {
+    localStorage.setItem("kulosa", "True");
+}
+
+function addCruel() {
+    localStorage.setItem("cruel", "True");
+}
+
+function addBiz() {
+    localStorage.setItem("biz", "True");
+}
+
+function addDinero() {
+    localStorage.setItem("dinero", "True");
+}
+
+function addAltura() {
+    localStorage.setItem("altura", "True");
+}
+
+function addBaby() {
+    localStorage.setItem("baby", "True");
+}
+
+function addDespe() {
+    localStorage.setItem("despe", "True");
+}
+
+function addKimi() {
+    localStorage.setItem("kimi", "True");
+}
+
+function addGurenge() {
+    localStorage.setItem("gurenge", "True");
+}
+
+function addCbat() {
+    localStorage.setItem("cbat", "True");
+}
+
+function addShiga() {
+    localStorage.setItem("shiga", "True");
+}
+
+function addFreaky() {
+    localStorage.setItem("freaky", "True");
 }
