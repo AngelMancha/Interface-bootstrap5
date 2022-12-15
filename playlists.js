@@ -3,26 +3,16 @@
 /* La siguiente función guarda en Local Storage la información de la playlist que crea el usuario */
 function setPlaylist(){
     let playlist_name = document.getElementById("nombre_playlist").value;
-    let bool = checkPlaylistName(playlist_name)
     let playlist_photo = document.getElementById("foto_playlist").value;
-    if (bool) {
-        localStorage.setItem("Playlist", playlist_name);
-        localStorage.setItem("foto_playlist", playlist_photo);
-        window.alert("Playlist creada con éxito")
-        location.reload()
-    }
+    localStorage.setItem("Playlist", playlist_name);
+    localStorage.setItem("foto_playlist", playlist_photo);
+    window.alert("Playlist creada con éxito");
+    location.reload()
+
 
 }
 
-function checkPlaylistName(playlist_name) {
-    if (playlist_name.length <1) {
-        alert("Para poder crear una playlist debes ponerla nombre")
-        return false;
-    }
-    else {
-        return true;
-    }
-}
+
 
 
 /* Esta función comprueba si una playlist existe. En caso de que no exista se mostrará un mensaje
@@ -61,6 +51,7 @@ function getPlaylistImage(image) {
 /* Esta función pone los valores de la playlist */
 function setPlaylistValues(playlist_name, playlist_photo) {
     document.getElementById("playlist_tittle").innerHTML = playlist_name;
+    document.getElementById("btn-crear").innerHTML = "Modificar playlist";
     if (playlist_photo !== "") {
         let id_photo_playlist = document.getElementById("photo_playlist");
         id_photo_playlist.src = getPlaylistImage(playlist_photo);

@@ -23,6 +23,8 @@ function validarContrasena()
   setCookie();
   localStorage.setItem("status","OK");
   profile_menu();
+  window.alert('Usuario registrado con éxito');
+  location.reload();
   return true;
   }
   else
