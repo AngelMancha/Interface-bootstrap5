@@ -3,11 +3,25 @@
 /* La siguiente función guarda en Local Storage la información de la playlist que crea el usuario */
 function setPlaylist(){
     let playlist_name = document.getElementById("nombre_playlist").value;
+    let bool = checkPlaylistName(playlist_name)
     let playlist_photo = document.getElementById("foto_playlist").value;
-    localStorage.setItem("Playlist", playlist_name);
-    localStorage.setItem("foto_playlist", playlist_photo);
-    window.alert("Playlist creada con éxito")
-    location.reload()
+    if (bool) {
+        localStorage.setItem("Playlist", playlist_name);
+        localStorage.setItem("foto_playlist", playlist_photo);
+        window.alert("Playlist creada con éxito")
+        location.reload()
+    }
+
+}
+
+function checkPlaylistName(playlist_name) {
+    if (playlist_name.length <1) {
+        alert("Para poder crear una playlist debes ponerla nombre")
+        return false;
+    }
+    else {
+        return true;
+    }
 }
 
 
