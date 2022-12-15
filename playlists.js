@@ -84,7 +84,7 @@ function viewSongs() {
         td = tr[i].getElementsByTagName("td")[1];
         if (td) {
             song = td.textContent || td.innerText;
-            document.write(song)
+
             if (array_songs[i-1] === "True") {
                 tr[i].style.display = "";
             }
