@@ -1,4 +1,4 @@
-## Interactive player 
+# Interactive player 
 
 # Demo
 ![visualizador](media/inicio.png)
