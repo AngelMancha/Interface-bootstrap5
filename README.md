@@ -1,3 +1,4 @@
+Ángel José Mancha, Ruth Navarro Carrasco, Alejando Pardo, Alicia Guitierrez
 # Interactive player 
 
 # Demo
